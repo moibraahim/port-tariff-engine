@@ -111,6 +111,11 @@ class RuleStore:
         all_rules = self.load_rules()
         return sorted(set(r.port for r in all_rules))
 
+    def get_available_due_types(self) -> list[str]:
+        """List all due types that have extracted rules."""
+        all_rules = self.load_rules()
+        return sorted(set(r.due_type for r in all_rules))
+
     def _load_from_file(self, filepath: Path) -> list[TariffRule]:
         """Load rules from a single JSON file."""
         try:

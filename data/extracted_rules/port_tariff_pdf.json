@@ -2,8 +2,8 @@
   "metadata": {
     "document": "port_tariff.pdf",
     "source_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
-    "extracted_at": "2026-03-06T19:07:04.801152+00:00",
-    "rule_count": 21,
+    "extracted_at": "2026-03-06T20:28:06.214085+00:00",
+    "rule_count": 40,
     "model": "gemini-2.0-flash"
   },
   "rules": [
@@ -11,7 +11,7 @@
       "id": "all_ports_light_dues",
       "due_type": "light_dues",
       "port": "All Ports",
-      "description": "Light dues on vessels",
+      "description": "Light dues for all other vessels (excluding self-propelled vessels licensed by the Department of Environmental Affairs and Tourism)",
       "rate_structure": {
         "type": "flat",
         "rate": "117.08",
@@ -26,26 +26,28 @@
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
-        "section_number": "1.1.1",
+        "section_number": "1.1",
         "section_title": "Light Dues",
         "page_numbers": [
           5
         ],
         "text_excerpt": "--- PAGE 5 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nExemptions\nSECTION 1\nA reduction of 100% would be allowed in the following instances:\n1.1 LIGHT DUES ON VESSELS \u2022 South African Police Services (SAPS) and South Af"
       },
-      "effective_date": "2024-04-01",
+      "effective_date": "April 2024 - March 2025",
       "currency": "ZAR",
       "notes": [
-        "Rate is for all other vessels (not self-propelled at registered port)",
-        "Rate is per 100 tons or part thereof of gross tonnage",
-        "Light dues raised at the first South African port of call and remains valid until the vessel departs from the last South African port of call, subject to conditions."
+        "Raised at the first South African port of call and remains valid until the vessel departs from the last South African port of call",
+        "Valid for 60 days in South African waters",
+        "After 60 days, vessel is deemed coastal and liable for monthly light dues",
+        "Vessels remaining within a specific port for extended periods are charged only once",
+        "Coasters are subject to special agreements and monthly billing"
       ]
     },
     {
       "id": "all_ports_excluding_durban_and_saldanha_bay_vts_dues",
       "due_type": "vts_dues",
-      "port": "All Ports excluding Durban and Saldanha Bay",
-      "description": "VTS charges on vessels",
+      "port": "All ports excluding Durban and Saldanha Bay",
+      "description": "VTS charges per GT per port call",
       "rate_structure": {
         "type": "flat",
         "rate": "0.54",
@@ -60,8 +62,8 @@
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
-        "section_number": "2.1.1",
-        "section_title": "VTS Charges",
+        "section_number": "2.1",
+        "section_title": "Vts Charges",
         "page_numbers": [
           6
         ],
@@ -75,7 +77,7 @@
       "id": "durban_and_saldanha_bay_vts_dues",
       "due_type": "vts_dues",
       "port": "Durban and Saldanha Bay",
-      "description": "VTS charges on vessels",
+      "description": "VTS charges per GT per port call",
       "rate_structure": {
         "type": "flat",
         "rate": "0.65",
@@ -90,8 +92,8 @@
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
-        "section_number": "2.1.1",
-        "section_title": "VTS Charges",
+        "section_number": "2.1",
+        "section_title": "Vts Charges",
         "page_numbers": [
           6
         ],
@@ -117,7 +119,23 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -148,7 +166,28 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 60 minutes prior to the notified time and the pilot has not boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -179,7 +218,23 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -210,7 +265,23 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -241,7 +312,23 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -272,7 +359,23 @@
       },
       "conditions": [],
       "exemptions": [],
-      "surcharges": [],
+      "surcharges": [
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the pilotage service terminates or commences outside ordinary working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the vessel is not ready to be moved 30 minutes after the notified time or 30 minutes after the pilot has boarded"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "If the request for a pilotage service is cancelled at any time within 30 minutes prior to the notified time and the pilot has not boarded"
+        }
+      ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
@@ -291,7 +394,7 @@
       "id": "richards_bay_towage_dues",
       "due_type": "towage_dues",
       "port": "Richards Bay",
-      "description": "Tugs/vessel assistance",
+      "description": "Towage / tug services",
       "rate_structure": {
         "type": "tiered",
         "tiers": [
@@ -341,14 +444,29 @@
         {
           "percentage": "25",
           "conditions": [],
-          "description": "Outside ordinary working hours"
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
         }
       ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.6",
-        "section_title": "Tugs/Vessel Assistance",
+        "section_title": "Tugs/Vessel Assist",
         "page_numbers": [
           8
         ],
@@ -364,7 +482,7 @@
       "id": "durban_towage_dues",
       "due_type": "towage_dues",
       "port": "Durban",
-      "description": "Tugs/vessel assistance",
+      "description": "Towage / tug services",
       "rate_structure": {
         "type": "tiered",
         "tiers": [
@@ -414,14 +532,117 @@
         {
           "percentage": "25",
           "conditions": [],
-          "description": "Outside ordinary working hours"
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
         }
       ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.6",
-        "section_title": "Tugs/Vessel Assistance",
+        "section_title": "Tugs/Vessel Assist",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "east_london_towage_dues",
+      "due_type": "towage_dues",
+      "port": "East London",
+      "description": "Towage / tug services",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "5622.16",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "8152.14",
+            "rate_per_unit": "200.97",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "27956.91",
+            "rate_per_unit": "66.67",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "55913.82",
+            "rate_per_unit": "25.80",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "0",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assist",
         "page_numbers": [
           8
         ],
@@ -437,7 +658,7 @@
       "id": "port_elizabeth_/_ngqura_towage_dues",
       "due_type": "towage_dues",
       "port": "Port Elizabeth / Ngqura",
-      "description": "Tugs/vessel assistance",
+      "description": "Towage / tug services",
       "rate_structure": {
         "type": "tiered",
         "tiers": [
@@ -487,14 +708,117 @@
         {
           "percentage": "25",
           "conditions": [],
-          "description": "Outside ordinary working hours"
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
         }
       ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.6",
-        "section_title": "Tugs/Vessel Assistance",
+        "section_title": "Tugs/Vessel Assist",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "mossel_bay_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Mossel Bay",
+      "description": "Towage / tug services",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "6316.53",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "8152.14",
+            "rate_per_unit": "173.37",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "25806.37",
+            "rate_per_unit": "60.21",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "0",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "0",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assist",
         "page_numbers": [
           8
         ],
@@ -510,7 +834,7 @@
       "id": "cape_town_towage_dues",
       "due_type": "towage_dues",
       "port": "Cape Town",
-      "description": "Tugs/vessel assistance",
+      "description": "Towage / tug services",
       "rate_structure": {
         "type": "tiered",
         "tiers": [
@@ -560,14 +884,29 @@
         {
           "percentage": "25",
           "conditions": [],
-          "description": "Outside ordinary working hours"
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
         }
       ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.6",
-        "section_title": "Tugs/Vessel Assistance",
+        "section_title": "Tugs/Vessel Assist",
         "page_numbers": [
           8
         ],
@@ -583,7 +922,7 @@
       "id": "saldanha_towage_dues",
       "due_type": "towage_dues",
       "port": "Saldanha",
-      "description": "Tugs/vessel assistance",
+      "description": "Towage / tug services",
       "rate_structure": {
         "type": "tiered",
         "tiers": [
@@ -633,14 +972,29 @@
         {
           "percentage": "25",
           "conditions": [],
-          "description": "Outside ordinary working hours"
+          "description": "outside working hours"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "additional tug requested"
+        },
+        {
+          "percentage": "50",
+          "conditions": [],
+          "description": "vessel without own power"
+        },
+        {
+          "percentage": "100",
+          "conditions": [],
+          "description": "additional tug for vessel without own power"
         }
       ],
       "reductions": [],
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.6",
-        "section_title": "Tugs/Vessel Assistance",
+        "section_title": "Tugs/Vessel Assist",
         "page_numbers": [
           8
         ],
@@ -656,7 +1010,7 @@
       "id": "richards_bay_running_lines",
       "due_type": "running_lines",
       "port": "Richards Bay",
-      "description": "Berthing services (running of vessel lines)",
+      "description": "Berthing services / running lines",
       "rate_structure": {
         "type": "per_service",
         "base_fee": "3175.89",
@@ -673,7 +1027,7 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -687,7 +1041,7 @@
       "id": "port_elizabeth_/_ngqura_running_lines",
       "due_type": "running_lines",
       "port": "Port Elizabeth / Ngqura",
-      "description": "Berthing services (running of vessel lines)",
+      "description": "Berthing services / running lines",
       "rate_structure": {
         "type": "per_service",
         "base_fee": "3838.62",
@@ -704,7 +1058,7 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -718,7 +1072,7 @@
       "id": "cape_town_running_lines",
       "due_type": "running_lines",
       "port": "Cape Town",
-      "description": "Berthing services (running of vessel lines)",
+      "description": "Berthing services / running lines",
       "rate_structure": {
         "type": "per_service",
         "base_fee": "3052.33",
@@ -735,7 +1089,7 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -749,7 +1103,7 @@
       "id": "saldanha_running_lines",
       "due_type": "running_lines",
       "port": "Saldanha",
-      "description": "Berthing services (running of vessel lines)",
+      "description": "Berthing services / running lines",
       "rate_structure": {
         "type": "per_service",
         "base_fee": "4006.34",
@@ -766,7 +1120,7 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -777,10 +1131,10 @@
       "notes": []
     },
     {
-      "id": "durban_running_lines",
+      "id": "other_ports_running_lines",
       "due_type": "running_lines",
-      "port": "Durban",
-      "description": "Berthing services (running of vessel lines)",
+      "port": "Other Ports",
+      "description": "Berthing services / running lines",
       "rate_structure": {
         "type": "per_service",
         "base_fee": "2801.91",
@@ -797,7 +1151,7 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -808,16 +1162,16 @@
       "notes": []
     },
     {
-      "id": "east_london_running_lines",
+      "id": "port_elizabeth_/_ngqura_running_lines",
       "due_type": "running_lines",
-      "port": "East London",
-      "description": "Berthing services (running of vessel lines)",
+      "port": "Port Elizabeth / Ngqura",
+      "description": "Running of vessels' lines",
       "rate_structure": {
         "type": "per_service",
-        "base_fee": "2801.91",
-        "unit_rate": "13.68",
-        "per_unit": "100",
-        "base_field": "gross_tonnage",
+        "base_fee": "2266.73",
+        "unit_rate": "0",
+        "per_unit": "0",
+        "base_field": "null",
         "rounding": "ceil",
         "service_count_field": "num_operations"
       },
@@ -828,7 +1182,100 @@
       "source": {
         "document": "port_tariff.pdf",
         "section_number": "3.8",
-        "section_title": "Berthing Services (Running Lines)",
+        "section_title": "Berthing Services",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "cape_town_running_lines",
+      "due_type": "running_lines",
+      "port": "Cape Town",
+      "description": "Running of vessels' lines",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "2370.84",
+        "unit_rate": "0",
+        "per_unit": "0",
+        "base_field": "null",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "saldanha_running_lines",
+      "due_type": "running_lines",
+      "port": "Saldanha",
+      "description": "Running of vessels' lines",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "2085.59",
+        "unit_rate": "0",
+        "per_unit": "0",
+        "base_field": "null",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "other_ports_running_lines",
+      "due_type": "running_lines",
+      "port": "Other Ports",
+      "description": "Running of vessels' lines",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "1654.56",
+        "unit_rate": "0",
+        "per_unit": "0",
+        "base_field": "null",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services",
         "page_numbers": [
           9
         ],
@@ -842,7 +1289,7 @@
       "id": "all_ports_port_dues",
       "due_type": "port_dues",
       "port": "All Ports",
-      "description": "Port dues on vessels",
+      "description": "Port dues",
       "rate_structure": {
         "type": "composite",
         "components": [
@@ -871,29 +1318,29 @@
         {
           "percentage": "20",
           "conditions": [],
-          "description": "Vessels in port for longer than 30 days not engaged in cargo working or undergoing repairs will be liable for a 20% surcharge on the incremental fee of port dues."
+          "description": "Vessels in port for longer than 30 days not engaged in cargo working or undergoing repairs (on the incremental fee of port dues)"
         }
       ],
       "reductions": [
         {
           "percentage": "10",
           "conditions": [],
-          "description": "certified double hulled liquid bulk tankers, liquid bulk tankers equipped with segregated ballast tanks and liquid bulk tankers in possession of a \u201cGreen Award.\u201d The reduction is applied for any one certification or a combination thereof with a maximum of 10%."
+          "description": "Certified double hulled liquid bulk tankers, liquid bulk tankers equipped with segregated ballast tanks and liquid bulk tankers in possession of a Green Award"
         },
         {
           "percentage": "15",
           "conditions": [],
-          "description": "vessel remaining in port for less than 12 hours"
+          "description": "Vessel remaining in port for less than 12 hours"
         },
         {
           "percentage": "35",
           "conditions": [],
-          "description": "Vessels not engaged in cargo working for the first 30 days only; Bona fide coasters; Passenger vessels; Small vessels resorting under Section 4, Clause 4.2 when visiting a port other than their registered port."
+          "description": "Vessels not engaged in cargo working for the first 30 days only; Bona fide coasters; Passenger vessels; Small vessels resorting under Section 4, Clause 4.2 when visiting a port other than their registered port"
         },
         {
           "percentage": "60",
           "conditions": [],
-          "description": "vessels calling for the sole purpose of taking on bunkers and/or stores and /or water or a combination of all three, provided the vessel\u2019s entire stay does not exceed 48 hours. This reduction will not be enjoyed in addition to the 35% reduction granted for vessels not engaged in cargo working for the first 30 days only, bona fide coasters, passenger vessels and small vessels resorting under Section 4, Clause 4.2"
+          "description": "Vessels calling for the sole purpose of taking on bunkers and/or stores and/or water or a combination of all three, provided the vessel\u2019s entire stay does not exceed 48 hours"
         }
       ],
       "source": {
@@ -905,7 +1352,455 @@
         ],
         "text_excerpt": "--- PAGE 11 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nSECTION 4 A reduction of 10% will be allowed to certified double hulled liquid bulk tankers, liquid\nbulk tankers equipped with segregated ballast tanks and liquid"
       },
-      "effective_date": "2024-04-01",
+      "effective_date": "April 2024 - March 2025",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Non-mechanically propelled boats (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "47.00",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Self-propelled boats (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "78.41",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "saldanha_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "Saldanha",
+      "description": "Fishing vessels operating from fishing harbour (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "137.66",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Fishing vessels, non-steel hulls (per financial year)",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "10",
+            "base_fee": "189.37",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10",
+            "max_value": null,
+            "base_fee": "378.68",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "length_overall",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Fishing vessels, steel hulls (per financial year)",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "10",
+            "base_fee": "382.31",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10",
+            "max_value": null,
+            "base_fee": "764.52",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "length_overall",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Hulks (per day)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "9.19",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Pleasure vessels: Rowing boats (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "111.93",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Pleasure vessels: up to 6m (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "223.88",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Pleasure vessels: over 6m (per financial year)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "447.71",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "saldanha_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "Saldanha",
+      "description": "Vessels shipping ore at ore loading jetty (per hour)",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "1.15",
+        "per_unit": "1",
+        "base_field": "dwt",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Visiting vessels (not engaged in trade) - 31 to 120 days",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "2.82",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Visiting vessels (not engaged in trade) - 121 to 210 days",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "5.56",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Visiting vessels (not engaged in trade) - 211 to 365 days",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "11.14",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_cargo_dues",
+      "due_type": "cargo_dues",
+      "port": "All Ports",
+      "description": "Visiting vessels (not engaged in trade) - over 12 months",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "33.45",
+        "per_unit": "1",
+        "base_field": "length_overall",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "12",
+        "section_title": "Cargo Dues",
+        "page_numbers": [
+          12
+        ],
+        "text_excerpt": "--- PAGE 12 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nBerth dues are calculated by obtaining the following source documents from the Terminal\nOperators: 4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE\nVESSELS\n\u2022 B"
+      },
+      "effective_date": "",
       "currency": "ZAR",
       "notes": []
     }

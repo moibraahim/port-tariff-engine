@@ -10,12 +10,31 @@ from ..models.rules import TariffRule, TieredRate
 from ..models.vessel import VesselProfile
 from ..models.results import CalculationResult, CalculationLine, AuditEntry
 from ..ingestion.rule_store import RuleStore
-from .rule_matcher import find_applicable_rules, STANDARD_DUE_TYPES
+from .rule_matcher import find_applicable_rules, get_available_due_types
 from .condition_evaluator import check_exemptions, apply_adjustments
 from .calculator import calculate_rule
 
-# Due types that are charged per operation (entering + leaving = 2)
-PER_OPERATION_DUE_TYPES = {"towage_dues"}
+
+def _is_per_operation_rule(rule: TariffRule) -> bool:
+    """
+    Detect if a rule should be multiplied by num_operations.
+
+    Checks rule notes and due type name for per-operation indicators.
+    PerServiceRate already handles this internally via service_count_field,
+    so this only applies to TieredRate rules that mention per-operation charging.
+    """
+    # Check notes for "per operation" mentions
+    for note in rule.notes:
+        if "per operation" in note.lower() or "per service" in note.lower():
+            return True
+
+    # Common due types that are per-operation when using TieredRate
+    per_op_keywords = ["towage", "tug"]
+    for keyword in per_op_keywords:
+        if keyword in rule.due_type.lower() or keyword in rule.description.lower():
+            return True
+
+    return False
 
 
 def calculate_port_dues(
@@ -49,7 +68,7 @@ def calculate_port_dues(
     # Step 1: Find applicable rules
     matched_rules = find_applicable_rules(store, port, vessel, due_types)
 
-    target_types = due_types or STANDARD_DUE_TYPES
+    target_types = due_types or get_available_due_types(store)
     for due_type in target_types:
         if due_type not in matched_rules:
             result.warnings.append(f"No rule found for {due_type} at {port}")
@@ -73,11 +92,22 @@ def calculate_port_dues(
             continue
 
         # Step 3: Calculate base amount
-        line = calculate_rule(rule, vessel)
+        try:
+            line = calculate_rule(rule, vessel)
+        except (AttributeError, KeyError, ValueError) as e:
+            result.warnings.append(
+                f"Cannot calculate {due_type}: vessel missing required field ({e})"
+            )
+            continue
 
-        # Step 3b: For per-operation dues (towage), multiply by num_operations
-        # when the rate structure doesn't already handle it (TieredRate)
-        if due_type in PER_OPERATION_DUE_TYPES and isinstance(rule.rate_structure, TieredRate):
+        # Step 3b: For per-operation dues, multiply by num_operations
+        # when the rate structure doesn't already handle it (TieredRate).
+        # Detect from rule notes ("charged per operation") or due type name.
+        is_per_operation = (
+            isinstance(rule.rate_structure, TieredRate) and
+            _is_per_operation_rule(rule)
+        )
+        if is_per_operation:
             num_ops = vessel.operational_data.num_operations
             per_op_amount = line.amount
             line.amount = line.amount * num_ops

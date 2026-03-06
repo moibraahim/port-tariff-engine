@@ -26,7 +26,7 @@ class GeminiClient:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY not set. Provide via env or constructor.")
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel("gemini-2.0-flash")
+        self.model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
 
     def extract_structured(self, prompt: str, context: str) -> dict:
         """

@@ -51,7 +51,8 @@ def main(pdf_path: str):
 
     # Stage 2: Section Splitting
     logger.info("\n--- Stage 2: Section Splitting ---")
-    sections = split_into_sections(parsed_doc)
+    client = GeminiClient()
+    sections = split_into_sections(parsed_doc, gemini_client=client)
     for sec in sections:
         logger.info(
             "  [%s] %s (pages %d-%d, %d tables)",
@@ -62,7 +63,6 @@ def main(pdf_path: str):
 
     # Stage 3: Rule Extraction
     logger.info("\n--- Stage 3: Rule Extraction (Gemini) ---")
-    client = GeminiClient()
     rules = extract_all_rules(client, sections, pdf.name)
 
     if not rules:

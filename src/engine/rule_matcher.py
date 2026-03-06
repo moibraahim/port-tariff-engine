@@ -17,7 +17,8 @@ from .condition_evaluator import evaluate_conditions
 
 logger = logging.getLogger(__name__)
 
-# Canonical due types we calculate
+# Common due types — used as defaults if no specific types are requested.
+# Dynamically extended with any additional types found in the rule store.
 STANDARD_DUE_TYPES = [
     "light_dues",
     "port_dues",
@@ -26,6 +27,23 @@ STANDARD_DUE_TYPES = [
     "pilotage_dues",
     "running_lines",
 ]
+
+
+def get_available_due_types(store: RuleStore) -> list[str]:
+    """
+    Get all due types present in the rule store.
+    Returns STANDARD_DUE_TYPES + any additional types discovered during ingestion.
+    """
+    all_rules = store.load_rules()
+    discovered = sorted(set(r.due_type for r in all_rules))
+
+    # Merge: standard types first (in order), then any extras
+    result = list(STANDARD_DUE_TYPES)
+    for dt in discovered:
+        if dt not in result:
+            result.append(dt)
+
+    return result
 
 
 def find_applicable_rules(
@@ -44,7 +62,7 @@ def find_applicable_rules(
     2. "All Ports" rule (e.g., light dues apply everywhere)
     3. "Other Ports" / "Other" rule (catch-all for ports not listed)
     """
-    target_types = due_types or STANDARD_DUE_TYPES
+    target_types = due_types or get_available_due_types(store)
     all_rules = store.load_rules()
     result: dict[str, TariffRule] = {}
 

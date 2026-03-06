@@ -111,13 +111,13 @@ async def ingest_tariff(file: UploadFile = File(...)):
         logger.info("Stage 1: Parsing PDF...")
         parsed_doc = parse_pdf(tmp_path)
 
-        # Stage 2: Split into sections
+        # Stage 2: Split into sections (pass Gemini client for LLM fallback)
         logger.info("Stage 2: Splitting into sections...")
-        sections = split_into_sections(parsed_doc)
+        client = GeminiClient()
+        sections = split_into_sections(parsed_doc, gemini_client=client)
 
         # Stage 3: Extract rules
         logger.info("Stage 3: Extracting rules via Gemini...")
-        client = GeminiClient()
         rules = extract_all_rules(client, sections, file.filename)
 
         if not rules:
