@@ -1,0 +1,913 @@
+{
+  "metadata": {
+    "document": "port_tariff.pdf",
+    "source_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+    "extracted_at": "2026-03-06T19:07:04.801152+00:00",
+    "rule_count": 21,
+    "model": "gemini-2.0-flash"
+  },
+  "rules": [
+    {
+      "id": "all_ports_light_dues",
+      "due_type": "light_dues",
+      "port": "All Ports",
+      "description": "Light dues on vessels",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "117.08",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "minimum_charge": "0"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "1.1.1",
+        "section_title": "Light Dues",
+        "page_numbers": [
+          5
+        ],
+        "text_excerpt": "--- PAGE 5 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nExemptions\nSECTION 1\nA reduction of 100% would be allowed in the following instances:\n1.1 LIGHT DUES ON VESSELS \u2022 South African Police Services (SAPS) and South Af"
+      },
+      "effective_date": "2024-04-01",
+      "currency": "ZAR",
+      "notes": [
+        "Rate is for all other vessels (not self-propelled at registered port)",
+        "Rate is per 100 tons or part thereof of gross tonnage",
+        "Light dues raised at the first South African port of call and remains valid until the vessel departs from the last South African port of call, subject to conditions."
+      ]
+    },
+    {
+      "id": "all_ports_excluding_durban_and_saldanha_bay_vts_dues",
+      "due_type": "vts_dues",
+      "port": "All Ports excluding Durban and Saldanha Bay",
+      "description": "VTS charges on vessels",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "0.54",
+        "per_unit": "1",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "minimum_charge": "235.52"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "2.1.1",
+        "section_title": "VTS Charges",
+        "page_numbers": [
+          6
+        ],
+        "text_excerpt": "--- PAGE 6 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nSECTION 2 SECTION 3\nMARINE SERVICES\nVESSEL TRAFFIC SERVICES (VTS) 3.1 GENERAL TERMS AND CONDITIONS\n\u201cOrdinary Working Hours\u201d\n2.1 VTS CHARGES ON VESSELS Port of Moss"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "durban_and_saldanha_bay_vts_dues",
+      "due_type": "vts_dues",
+      "port": "Durban and Saldanha Bay",
+      "description": "VTS charges on vessels",
+      "rate_structure": {
+        "type": "flat",
+        "rate": "0.65",
+        "per_unit": "1",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "minimum_charge": "235.52"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "2.1.1",
+        "section_title": "VTS Charges",
+        "page_numbers": [
+          6
+        ],
+        "text_excerpt": "--- PAGE 6 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nSECTION 2 SECTION 3\nMARINE SERVICES\nVESSEL TRAFFIC SERVICES (VTS) 3.1 GENERAL TERMS AND CONDITIONS\n\u201cOrdinary Working Hours\u201d\n2.1 VTS CHARGES ON VESSELS Port of Moss"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "richards_bay_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Richards Bay",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "30960.46",
+        "unit_rate": "10.93",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "durban_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Durban",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "18608.61",
+        "unit_rate": "9.72",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "port_elizabeth_/_ngqura_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Port Elizabeth / Ngqura",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "8970.00",
+        "unit_rate": "14.33",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "cape_town_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Cape Town",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "6342.39",
+        "unit_rate": "10.20",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "saldanha_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Saldanha",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "9673.57",
+        "unit_rate": "13.66",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "other_pilotage_dues",
+      "due_type": "pilotage_dues",
+      "port": "Other",
+      "description": "Pilotage services",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "6547.45",
+        "unit_rate": "10.49",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.3",
+        "section_title": "Pilotage Services",
+        "page_numbers": [
+          7
+        ],
+        "text_excerpt": "--- PAGE 7 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.3 PILOTAGE SERVICES A surcharge of 50% is only applicable at the Port of Durban in the following instance:\nPilotage is compulsory at the Ports of Richards Bay, D"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "richards_bay_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Richards Bay",
+      "description": "Tugs/vessel assistance",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "7001.67",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "13020.67",
+            "rate_per_unit": "275.32",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "39999.88",
+            "rate_per_unit": "101.08",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "79999.76",
+            "rate_per_unit": "30.11",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "103999.70",
+            "rate_per_unit": "21.50",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "Outside ordinary working hours"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assistance",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "durban_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Durban",
+      "description": "Tugs/vessel assistance",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "8140.00",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "12633.99",
+            "rate_per_unit": "268.99",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "38494.51",
+            "rate_per_unit": "84.95",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "73118.07",
+            "rate_per_unit": "32.24",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "93548.13",
+            "rate_per_unit": "23.65",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "Outside ordinary working hours"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assistance",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "port_elizabeth_/_ngqura_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Port Elizabeth / Ngqura",
+      "description": "Tugs/vessel assistance",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "7206.98",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "11168.45",
+            "rate_per_unit": "237.53",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "32257.98",
+            "rate_per_unit": "73.10",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "64515.95",
+            "rate_per_unit": "21.50",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "82542.46",
+            "rate_per_unit": "21.50",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "Outside ordinary working hours"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assistance",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "cape_town_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Cape Town",
+      "description": "Tugs/vessel assistance",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "5411.47",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "7898.57",
+            "rate_per_unit": "194.63",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "27741.85",
+            "rate_per_unit": "64.52",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "53978.33",
+            "rate_per_unit": "47.32",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "79569.67",
+            "rate_per_unit": "38.71",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "Outside ordinary working hours"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assistance",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "saldanha_towage_dues",
+      "due_type": "towage_dues",
+      "port": "Saldanha",
+      "description": "Tugs/vessel assistance",
+      "rate_structure": {
+        "type": "tiered",
+        "tiers": [
+          {
+            "min_value": "0",
+            "max_value": "2000",
+            "base_fee": "9038.42",
+            "rate_per_unit": "0",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "2001",
+            "max_value": "10000",
+            "base_fee": "15378.78",
+            "rate_per_unit": "327.43",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "10001",
+            "max_value": "50000",
+            "base_fee": "47311.70",
+            "rate_per_unit": "103.23",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "50001",
+            "max_value": "100000",
+            "base_fee": "90322.33",
+            "rate_per_unit": "27.97",
+            "per_unit": "100"
+          },
+          {
+            "min_value": "100001",
+            "max_value": null,
+            "base_fee": "111827.63",
+            "rate_per_unit": "47.32",
+            "per_unit": "100"
+          }
+        ],
+        "base_field": "gross_tonnage",
+        "per_unit": "100",
+        "rounding": "ceil"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "25",
+          "conditions": [],
+          "description": "Outside ordinary working hours"
+        }
+      ],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.6",
+        "section_title": "Tugs/Vessel Assistance",
+        "page_numbers": [
+          8
+        ],
+        "text_excerpt": "--- PAGE 8 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\n3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE\n\u2022 A surcharge of 25% is payable for a service either commencing or terminating outside\nThe table hereunder shows the c"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": [
+        "Charged per operation"
+      ]
+    },
+    {
+      "id": "richards_bay_running_lines",
+      "due_type": "running_lines",
+      "port": "Richards Bay",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "3175.89",
+        "unit_rate": "13.46",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "port_elizabeth_/_ngqura_running_lines",
+      "due_type": "running_lines",
+      "port": "Port Elizabeth / Ngqura",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "3838.62",
+        "unit_rate": "18.72",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "cape_town_running_lines",
+      "due_type": "running_lines",
+      "port": "Cape Town",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "3052.33",
+        "unit_rate": "14.92",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "saldanha_running_lines",
+      "due_type": "running_lines",
+      "port": "Saldanha",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "4006.34",
+        "unit_rate": "16.97",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "durban_running_lines",
+      "due_type": "running_lines",
+      "port": "Durban",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "2801.91",
+        "unit_rate": "13.68",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "east_london_running_lines",
+      "due_type": "running_lines",
+      "port": "East London",
+      "description": "Berthing services (running of vessel lines)",
+      "rate_structure": {
+        "type": "per_service",
+        "base_fee": "2801.91",
+        "unit_rate": "13.68",
+        "per_unit": "100",
+        "base_field": "gross_tonnage",
+        "rounding": "ceil",
+        "service_count_field": "num_operations"
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [],
+      "reductions": [],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "3.8",
+        "section_title": "Berthing Services (Running Lines)",
+        "page_numbers": [
+          9
+        ],
+        "text_excerpt": "--- PAGE 9 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nAt the Port of Saldanha Fees for launch per hour or part thereof\nAll Ports, Large Launch\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.2 370.85\nFirst 12 hours, per tug per ho"
+      },
+      "effective_date": "",
+      "currency": "ZAR",
+      "notes": []
+    },
+    {
+      "id": "all_ports_port_dues",
+      "due_type": "port_dues",
+      "port": "All Ports",
+      "description": "Port dues on vessels",
+      "rate_structure": {
+        "type": "composite",
+        "components": [
+          {
+            "type": "flat",
+            "rate": "192.73",
+            "per_unit": "100",
+            "base_field": "gross_tonnage",
+            "rounding": "ceil",
+            "minimum_charge": "0"
+          },
+          {
+            "type": "time_based",
+            "rate": "57.79",
+            "per_unit": "100",
+            "base_field": "gross_tonnage",
+            "time_field": "days_alongside",
+            "rounding": "ceil",
+            "minimum_charge": "0"
+          }
+        ]
+      },
+      "conditions": [],
+      "exemptions": [],
+      "surcharges": [
+        {
+          "percentage": "20",
+          "conditions": [],
+          "description": "Vessels in port for longer than 30 days not engaged in cargo working or undergoing repairs will be liable for a 20% surcharge on the incremental fee of port dues."
+        }
+      ],
+      "reductions": [
+        {
+          "percentage": "10",
+          "conditions": [],
+          "description": "certified double hulled liquid bulk tankers, liquid bulk tankers equipped with segregated ballast tanks and liquid bulk tankers in possession of a \u201cGreen Award.\u201d The reduction is applied for any one certification or a combination thereof with a maximum of 10%."
+        },
+        {
+          "percentage": "15",
+          "conditions": [],
+          "description": "vessel remaining in port for less than 12 hours"
+        },
+        {
+          "percentage": "35",
+          "conditions": [],
+          "description": "Vessels not engaged in cargo working for the first 30 days only; Bona fide coasters; Passenger vessels; Small vessels resorting under Section 4, Clause 4.2 when visiting a port other than their registered port."
+        },
+        {
+          "percentage": "60",
+          "conditions": [],
+          "description": "vessels calling for the sole purpose of taking on bunkers and/or stores and /or water or a combination of all three, provided the vessel\u2019s entire stay does not exceed 48 hours. This reduction will not be enjoyed in addition to the 35% reduction granted for vessels not engaged in cargo working for the first 30 days only, bona fide coasters, passenger vessels and small vessels resorting under Section 4, Clause 4.2"
+        }
+      ],
+      "source": {
+        "document": "port_tariff.pdf",
+        "section_number": "4.1.1",
+        "section_title": "Port Dues",
+        "page_numbers": [
+          11
+        ],
+        "text_excerpt": "--- PAGE 11 ---\nTariffs subject to VAT at 15%: Tariffs in South African Rand Tariffs subject to VAT at 15%: Tariffs in South African Rand\nSECTION 4 A reduction of 10% will be allowed to certified double hulled liquid bulk tankers, liquid\nbulk tankers equipped with segregated ballast tanks and liquid"
+      },
+      "effective_date": "2024-04-01",
+      "currency": "ZAR",
+      "notes": []
+    }
+  ]
+}
