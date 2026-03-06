@@ -1,0 +1,261 @@
+[
+  {
+    "pdf": "dpworld_uae_2023.pdf",
+    "country": "UAE",
+    "pages": 64,
+    "tables": 90,
+    "sections_found": 3,
+    "rules_extracted": 2,
+    "ports_found": [
+      "All Ports",
+      "General"
+    ],
+    "due_types_found": {
+      "All Ports": [
+        "towage_dues"
+      ],
+      "General": [
+        "pilotage_dues"
+      ]
+    },
+    "calculation_results": {
+      "All Ports": {
+        "towage_dues": "4200.00"
+      },
+      "General": {
+        "towage_dues": "4200.00",
+        "pilotage_dues": "0.00"
+      }
+    },
+    "calculation_warnings": {
+      "All Ports": [
+        "No rule found for light_dues at All Ports",
+        "No rule found for port_dues at All Ports",
+        "No rule found for vts_dues at All Ports",
+        "No rule found for pilotage_dues at All Ports",
+        "No rule found for running_lines at All Ports"
+      ],
+      "General": [
+        "No rule found for light_dues at General",
+        "No rule found for port_dues at General",
+        "No rule found for vts_dues at General",
+        "No rule found for running_lines at General"
+      ]
+    },
+    "parse_time": 3.47,
+    "split_time": 0.02,
+    "extract_time": 4.51,
+    "total_time": 8.0,
+    "error": "",
+    "stage_failed": ""
+  },
+  {
+    "pdf": "fujairah_uae_2024.pdf",
+    "country": "UAE",
+    "pages": 24,
+    "tables": 8,
+    "sections_found": 4,
+    "rules_extracted": 13,
+    "ports_found": [
+      "All Ports",
+      "Fujairah"
+    ],
+    "due_types_found": {
+      "All Ports": [
+        "wharfage"
+      ],
+      "Fujairah": [
+        "running_lines"
+      ]
+    },
+    "calculation_results": {
+      "All Ports": {
+        "wharfage": "111928.80"
+      },
+      "Fujairah": {
+        "running_lines": "1800.00",
+        "wharfage": "233185.00"
+      }
+    },
+    "calculation_warnings": {
+      "All Ports": [
+        "No rule found for light_dues at All Ports",
+        "No rule found for port_dues at All Ports",
+        "No rule found for towage_dues at All Ports",
+        "No rule found for vts_dues at All Ports",
+        "No rule found for pilotage_dues at All Ports",
+        "No rule found for running_lines at All Ports"
+      ],
+      "Fujairah": [
+        "No rule found for light_dues at Fujairah",
+        "No rule found for port_dues at Fujairah",
+        "No rule found for towage_dues at Fujairah",
+        "No rule found for vts_dues at Fujairah",
+        "No rule found for pilotage_dues at Fujairah"
+      ]
+    },
+    "parse_time": 1.27,
+    "split_time": 0.01,
+    "extract_time": 8.04,
+    "total_time": 9.31,
+    "error": "",
+    "stage_failed": ""
+  },
+  {
+    "pdf": "kenya_kpa_2024.pdf",
+    "country": "Kenya",
+    "pages": 40,
+    "tables": 1,
+    "sections_found": 6,
+    "rules_extracted": 4,
+    "ports_found": [
+      "Kenya Ports Authority"
+    ],
+    "due_types_found": {
+      "Kenya Ports Authority": [
+        "pilotage_dues",
+        "running_lines",
+        "towage_dues"
+      ]
+    },
+    "calculation_results": {
+      "Kenya Ports Authority": {
+        "towage_dues": "10421.00",
+        "pilotage_dues": "7502.00",
+        "running_lines": "340.00"
+      }
+    },
+    "calculation_warnings": {
+      "Kenya Ports Authority": [
+        "No rule found for light_dues at Kenya Ports Authority",
+        "No rule found for port_dues at Kenya Ports Authority",
+        "No rule found for vts_dues at Kenya Ports Authority"
+      ]
+    },
+    "parse_time": 2.32,
+    "split_time": 0.01,
+    "extract_time": 7.95,
+    "total_time": 10.28,
+    "error": "",
+    "stage_failed": ""
+  },
+  {
+    "pdf": "namport_namibia_2024.pdf",
+    "country": "Namibia",
+    "pages": 72,
+    "tables": 99,
+    "sections_found": 5,
+    "rules_extracted": 5,
+    "ports_found": [
+      "All Ports",
+      "L\u00fcderitz",
+      "Namport",
+      "Walvis Bay"
+    ],
+    "due_types_found": {
+      "All Ports": [
+        "port_dues"
+      ],
+      "L\u00fcderitz": [
+        "pilotage_dues"
+      ],
+      "Namport": [
+        "running_lines",
+        "towage_dues"
+      ],
+      "Walvis Bay": [
+        "pilotage_dues"
+      ]
+    },
+    "calculation_results": {
+      "All Ports": {
+        "port_dues": "239673.60"
+      },
+      "L\u00fcderitz": {
+        "port_dues": "239673.60",
+        "pilotage_dues": "7294.00"
+      },
+      "Namport": {
+        "port_dues": "239673.60",
+        "towage_dues": "21706.00",
+        "running_lines": "0.00"
+      },
+      "Walvis Bay": {
+        "port_dues": "239673.60",
+        "pilotage_dues": "7430.00"
+      }
+    },
+    "calculation_warnings": {
+      "All Ports": [
+        "No rule found for light_dues at All Ports",
+        "No rule found for towage_dues at All Ports",
+        "No rule found for vts_dues at All Ports",
+        "No rule found for pilotage_dues at All Ports",
+        "No rule found for running_lines at All Ports"
+      ],
+      "L\u00fcderitz": [
+        "No rule found for light_dues at L\u00fcderitz",
+        "No rule found for towage_dues at L\u00fcderitz",
+        "No rule found for vts_dues at L\u00fcderitz",
+        "No rule found for running_lines at L\u00fcderitz"
+      ],
+      "Namport": [
+        "No rule found for light_dues at Namport",
+        "No rule found for vts_dues at Namport",
+        "No rule found for pilotage_dues at Namport"
+      ],
+      "Walvis Bay": [
+        "No rule found for light_dues at Walvis Bay",
+        "No rule found for towage_dues at Walvis Bay",
+        "No rule found for vts_dues at Walvis Bay",
+        "No rule found for running_lines at Walvis Bay"
+      ]
+    },
+    "parse_time": 3.32,
+    "split_time": 0.02,
+    "extract_time": 9.09,
+    "total_time": 12.43,
+    "error": "",
+    "stage_failed": ""
+  },
+  {
+    "pdf": "tanzania_tpa_2024.pdf",
+    "country": "Tanzania",
+    "pages": 106,
+    "tables": 89,
+    "sections_found": 5,
+    "rules_extracted": 8,
+    "ports_found": [
+      "All Ports"
+    ],
+    "due_types_found": {
+      "All Ports": [
+        "light_dues",
+        "pilotage_dues",
+        "towage_dues",
+        "wharfage"
+      ]
+    },
+    "calculation_results": {
+      "All Ports": {
+        "light_dues": "3078.00",
+        "towage_dues": "5540.40",
+        "pilotage_dues": "1196.20",
+        "wharfage": "5130.00"
+      }
+    },
+    "calculation_warnings": {
+      "All Ports": [
+        "No rule found for port_dues at All Ports",
+        "No rule found for vts_dues at All Ports",
+        "No rule found for running_lines at All Ports"
+      ]
+    },
+    "parse_time": 8.9,
+    "split_time": 0.02,
+    "extract_time": 7.98,
+    "total_time": 16.89,
+    "error": "",
+    "stage_failed": ""
+  }
+]

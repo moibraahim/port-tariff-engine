@@ -122,7 +122,8 @@ def _calc_flat(rate: FlatRate, vessel: VesselProfile, audit: list[AuditEntry]) -
     Example: Light Dues = ceil(51300 / 100) * 117.08 = 513 * 117.08 = 60,062.04
     """
     base_value = _get_vessel_value(vessel, rate.base_field)
-    units = _apply_rounding(base_value / rate.per_unit, rate.rounding)
+    per_unit = rate.per_unit if rate.per_unit else Decimal("1")
+    units = _apply_rounding(base_value / per_unit, rate.rounding)
     amount = units * rate.rate
     amount = max(amount, rate.minimum_charge)
 
@@ -176,8 +177,9 @@ def _calc_tiered(rate: TieredRate, vessel: VesselProfile, audit: list[AuditEntry
     if matching_tier.rate_per_unit > 0:
         excess = base_value - matching_tier.min_value
         if excess > 0:
+            tier_per_unit = matching_tier.per_unit if matching_tier.per_unit else Decimal("1")
             excess_units = _apply_rounding(
-                excess / matching_tier.per_unit, rate.rounding
+                excess / tier_per_unit, rate.rounding
             )
             amount += excess_units * matching_tier.rate_per_unit
 
@@ -239,7 +241,8 @@ def _calc_per_service(rate: PerServiceRate, vessel: VesselProfile, audit: list[A
     base_value = _get_vessel_value(vessel, rate.base_field)
     num_ops = int(_get_vessel_value(vessel, rate.service_count_field))
 
-    units = _apply_rounding(base_value / rate.per_unit, rate.rounding)
+    per_unit = rate.per_unit if rate.per_unit else Decimal("1")
+    units = _apply_rounding(base_value / per_unit, rate.rounding)
     per_operation = rate.base_fee + (units * rate.unit_rate)
     amount = per_operation * num_ops
 
@@ -273,7 +276,8 @@ def _calc_time_based(rate: TimeBasedRate, vessel: VesselProfile, audit: list[Aud
     base_value = _get_vessel_value(vessel, rate.base_field)
     time_value = _get_vessel_value(vessel, rate.time_field)
 
-    units = _apply_rounding(base_value / rate.per_unit, rate.rounding)
+    per_unit = rate.per_unit if rate.per_unit else Decimal("1")
+    units = _apply_rounding(base_value / per_unit, rate.rounding)
     amount = units * rate.rate * time_value
     amount = max(amount, rate.minimum_charge)
 
