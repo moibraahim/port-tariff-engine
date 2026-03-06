@@ -1,7 +1,7 @@
 """
 Rule Store — Stage 4 of the Write Path.
 
-Persists extracted rules as the "Materialized View" (DDIA Ch 11).
+Persists extracted rules as structured JSON for fast querying.
 The rules are derived from the PDF source of truth and stored as
 queryable JSON for the deterministic read path.
 """
@@ -33,8 +33,8 @@ class RuleStore:
     """
     Persistent store for extracted tariff rules.
 
-    Implements the materialized view pattern: rules are derived data
-    that can be re-computed from the source PDF at any time.
+    Rules are derived data that can be re-extracted from the
+    source PDF at any time.
     """
 
     def __init__(self, store_dir: str | Path | None = None):
@@ -124,7 +124,7 @@ class RuleStore:
 
     @staticmethod
     def compute_file_hash(filepath: str | Path) -> str:
-        """Compute SHA-256 hash of a file for idempotency checking."""
+        """Compute SHA-256 hash of a file for change detection."""
         h = hashlib.sha256()
         with open(filepath, "rb") as f:
             for chunk in iter(lambda: f.read(8192), b""):

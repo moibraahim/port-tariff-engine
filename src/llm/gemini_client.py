@@ -2,7 +2,7 @@
 Gemini API client wrapper.
 
 Provides structured output extraction using Gemini's native capabilities.
-Temperature=0 for reproducibility (idempotency guarantee from DDIA Ch 11).
+Temperature=0 for reproducible, deterministic extraction.
 """
 
 import os

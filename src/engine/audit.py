@@ -1,7 +1,6 @@
 """
-Audit Builder — constructs full data lineage for every calculation.
+Audit Builder — constructs full traceability for every calculation.
 
-Implements the data lineage concept from DDIA Ch 12:
 Every output traces back through: page -> section -> rule -> formula -> result.
 """
 
@@ -35,7 +34,7 @@ def calculate_port_dues(
     4. Apply adjustments (surcharges/reductions)
     5. Build audit trail
 
-    Returns a complete result with full data lineage.
+    Returns a complete result with full audit trail.
     """
     result = CalculationResult(
         vessel_name=vessel.vessel_metadata.name,

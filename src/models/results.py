@@ -1,4 +1,4 @@
-"""Calculation result models with full audit trail for data lineage."""
+"""Calculation result models with full audit trail."""
 
 from decimal import Decimal
 from pydantic import BaseModel, Field

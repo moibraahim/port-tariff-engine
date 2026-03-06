@@ -9,7 +9,7 @@ This runs the full pipeline:
 1. Parse PDF → structured text + tables
 2. Split into sections by TOC
 3. Extract rules via Gemini (LLM)
-4. Persist rules as materialized view (JSON)
+4. Persist extracted rules (JSON)
 """
 
 import sys
@@ -90,7 +90,7 @@ def main(pdf_path: str):
         due_types = sorted(set(r.due_type for r in port_rules))
         logger.info("  %s: %s", port, due_types)
 
-    logger.info("\nMaterialized view is ready for deterministic querying.")
+    logger.info("\nExtracted rules are ready for querying.")
 
 
 if __name__ == "__main__":

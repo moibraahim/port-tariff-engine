@@ -4,7 +4,7 @@ Rule Extractor — Stage 3 of the Write Path.
 Uses Gemini to transform document sections into structured TariffRule objects.
 This is the LLM-heavy stage — runs once per tariff document during ingestion.
 
-Key design: temperature=0 for idempotency (DDIA Ch 11).
+Key design: temperature=0 for reproducible extraction.
 Each section is processed independently with a focused prompt.
 """
 

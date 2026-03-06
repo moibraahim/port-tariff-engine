@@ -1,10 +1,10 @@
 """
 Port Tariff Intelligence Engine — FastAPI Application.
 
-Exposes the CQRS architecture as a REST API:
-- Write Path: POST /ingest (upload PDF, extract rules)
-- Read Path: POST /calculate (deterministic calculation)
-- Inspection: GET /rules/{port} (view extracted rules)
+FastAPI application exposing the tariff engine:
+- POST /ingest — upload PDF, extract rules
+- POST /calculate — deterministic calculation
+- GET /rules/{port} — view extracted rules
 """
 
 import logging
@@ -35,9 +35,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="Port Tariff Intelligence Engine",
+    title="Port Tariff Engine",
     description=(
-        "CQRS-based system for automated port tariff calculation. "
+        "Automated port tariff calculation engine. "
         "Ingests port tariff PDFs and calculates vessel dues deterministically."
     ),
     version="1.0.0",
@@ -93,7 +93,7 @@ async def ingest_tariff(file: UploadFile = File(...)):
     1. Parse PDF (text + tables)
     2. Split into sections
     3. Extract rules via Gemini
-    4. Persist as materialized view
+    4. Persist extracted rules
     """
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(400, "Only PDF files are accepted")
@@ -159,7 +159,7 @@ async def calculate_dues(request: CalculateRequest):
     READ PATH: Calculate port dues for a vessel.
 
     This is the fast, deterministic path — no LLM involved:
-    1. Match applicable rules from the materialized view
+    1. Match applicable rules from extracted rule store
     2. Evaluate conditions and exemptions
     3. Calculate amounts with pure arithmetic
     4. Return results with full audit trail

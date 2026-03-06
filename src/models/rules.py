@@ -130,8 +130,8 @@ class TariffRule(BaseModel):
     """
     A single tariff rule extracted from a port tariff document.
 
-    This is the materialized view — derived from the PDF source of truth,
-    persisted for fast, deterministic query-time calculation.
+    Derived from the PDF and persisted for fast, deterministic
+    query-time calculation.
     """
     id: str = ""  # e.g. "durban_light_dues"
     due_type: str  # "light_dues", "port_dues", "towage", etc.

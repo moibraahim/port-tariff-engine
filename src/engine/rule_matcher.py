@@ -1,8 +1,8 @@
 """
 Rule Matcher — finds applicable rules for a given port and due type.
 
-Part of the Read Path. Queries the materialized view (rule store)
-to find rules that match the calculation request.
+Queries the extracted rules to find ones that match the
+calculation request for a given port and vessel.
 
 Handles "All Ports" rules (e.g., light dues, port dues) that apply
 to every port unless a port-specific rule overrides them.

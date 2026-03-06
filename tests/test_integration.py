@@ -127,7 +127,7 @@ class TestSudestadaDurban:
             ), f"Missing due type: {due_type}"
 
     def test_deterministic(self, rule_store, sudestada):
-        """Same input must produce identical output (idempotency)."""
+        """Same input must always produce identical output."""
         result1 = calculate_port_dues(rule_store, sudestada, "Durban")
         result2 = calculate_port_dues(rule_store, sudestada, "Durban")
 
